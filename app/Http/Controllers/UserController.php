@@ -16,9 +16,9 @@ class UserController extends Controller
     public function register(Request $req) {
 
         $req->validate([
-            'name' => 'required',
+            'name' => 'required|alpha',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:5'
+            'password' => 'required|min:8'
         ]);
 
         $user = User::create([
@@ -39,7 +39,7 @@ class UserController extends Controller
 
         $data = $request->validate([
             'email' => 'required|email',
-            'password' => 'required|min:5'
+            'password' => 'required|min:8'
         ]);
 
         if(Auth::attempt($data)) {
