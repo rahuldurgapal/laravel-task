@@ -34,7 +34,7 @@ class TaskController extends Controller
 
         return response()->json([
              'status' => true,
-             'message' => 1,
+             'message' => 'Successfully created a task',
              'task' => $task
         ]);
     }
@@ -60,9 +60,9 @@ class TaskController extends Controller
             $task->save();
 
             return response()->json([
-                'task' => $task,
                 'status' => 1,
-                'message' => 'Marked task as ' .$request->status
+                'message' => 'Marked task as ' .$request->status,
+                'task' => $task,
             ]);
     }
 }
