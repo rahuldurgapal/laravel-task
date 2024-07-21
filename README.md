@@ -137,3 +137,15 @@ curl -X POST http://localhost:8000/api/todo/add \
      -F "task=Sample Task" \
      -F "user_id=1"
 ```
+
+### Frontend Part
+
+### HTML Structure
+
+- The main components of the dashboard are:
+
+1. Navbar: Contains the logout button.
+2. Welcome Message: Displays a welcome message with the user's name.
+3. Add Task Form: A form to add new tasks.
+4. Task List: Displays the list of tasks with options to update their status.
+
